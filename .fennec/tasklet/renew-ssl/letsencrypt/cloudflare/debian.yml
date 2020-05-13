@@ -1,0 +1,32 @@
+variables:
+    PAGE_DOMAINS: ""
+    CLOUDFLARE_EMAIL: ""
+    CLOUDFLARE_KEY: ""
+    SSL_EMAIL: ""
+    GITLAB_PRIVATE_TOKEN: ""
+# Operational Variables
+    GITLAB_API: "https://gitlab.com/api/v4/projects"
+    SSL_WORKPATH: "./tmp"
+    SSL_PEM_PATH: ""
+    SSL_KEY_PATH: ""
+    SSL_CMDPATH: "./bin"
+    CERTBOT_PATH: "${SSL_CMDPATH}/certbot-auto"
+    DNS_HOOKPATH: "./fennec/tasklet/renew-ssl/letsencrypt/cloudflare/dns.sh"
+    CLOUDFLARE_UPDATE_HOOK: "${SSH_CMDPATH}/update.sh"
+    CLOUDFLARE_CLEAN_HOOK: "${SSH_CMDPATH}/clean.sh"
+
+renew-ssl:
+    image: debian:latest
+    stage: tasklet
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - schedules
+        variables:
+            - $TASK_TYPE == "renew-ssl"
+    script:
+        - /bin/bash $PWD/.fennec/tasklet/renew-ssl/letsencrypt/cloudflare/run.sh
+          -r

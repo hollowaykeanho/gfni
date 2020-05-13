@@ -1,0 +1,21 @@
+variables:
+    PUBLISH_PATH: "public"
+    SITE_PATH: ".sites"
+
+pages:
+    stage: publish
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - next
+    except:
+        refs:
+            - schedules
+    artifacts:
+        paths:
+            - public
+    script:
+        - /bin/bash $PWD/.fennec/publish/linux/scripts/01_hugo_build.sh -r

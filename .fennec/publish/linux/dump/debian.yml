@@ -1,0 +1,21 @@
+variables:
+    PUBLISH_PATH: "public"
+
+pages:
+    stage: publish
+    image: debian:latest
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - master
+    except:
+        refs:
+            - schedules
+    artifacts:
+        paths:
+            - public
+    script:
+        - /bin/bash $PWD/.fennec/publish/linux/scripts/01_dump.sh -r

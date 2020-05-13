@@ -1,0 +1,21 @@
+variables:
+    REPO_MAKEFILE: "./Makefile"
+
+test:
+    script:
+        - make prepare
+        - make
+        - make test
+
+package:
+    script:
+        - make prepare
+        - make
+        - make package
+
+upstream:
+    script:
+        - make prepare
+        - make
+        - make package
+        - make upstream

@@ -1,0 +1,17 @@
+
+test:
+    stage: test
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - master
+            - staging
+            - next
+    except:
+        refs:
+            - schedules
+    script:
+        - /bin/bash $PWD/.fennec/test/linux/scripts/go/01_all-mod.sh -r

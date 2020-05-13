@@ -1,0 +1,63 @@
+image: debian:latest
+
+stages:
+    - test
+    - package
+    - upstream
+    - publish
+    - tasklet
+
+variables:
+    TERM: "xterm"
+    GITLAB_CI: "true"
+    TASK_TYPE: ""
+
+before_script:
+    - apt-get install bash -y
+    - /bin/bash $PWD/.fennec/core/linux/scripts/setup.sh -r
+
+test:
+    stage: test
+    tags:
+      - linux
+    environment:
+        name: production
+    only:
+        variables:
+            - $TASK_TYPE == ""
+    script:
+        - echo "[ ERROR ] No test instruction given."
+        - exit 1
+
+package:
+    stage: package
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - master
+            - staging
+    except:
+        refs:
+            - schedules
+    script:
+        - echo "[ ERROR ] No packaging instruction given."
+        - exit 1
+
+upstream:
+    stage: upstream
+    tags:
+        - linux
+    environment:
+        name: production
+    only:
+        refs:
+            - master
+    except:
+        refs:
+            - schedules
+    script:
+        - echo "[ ERROR ] No upstream instruction given."
+        - exit 1

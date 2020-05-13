@@ -1,0 +1,3 @@
+test:
+    script:
+        - echo "[ SKIPPED ] no instruction given."
