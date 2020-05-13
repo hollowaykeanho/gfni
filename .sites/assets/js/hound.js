@@ -4,20 +4,27 @@ function _parseURLParams(keyword) {
 	return url.searchParams.get(keyword);
 }
 
+function _clearConsole() {
+	console.clear();
+}
+
 function _loadingSubmission() {
 	console.log("submission is loading")
 }
 
 function _successSubmission(resp) {
-	console.log("submission is successful");
+	exitSubmission();
 }
 
-function _errorSubmission() {
-	console.log("submission is having error");
-}
+function _exitSubmission() {
+	var url = document.getElementById('hound-input-form').dataset.redirect;
+	setTimeout(_clearConsole, 1500);
 
-function _clearConsole() {
-	console.clear();
+	if (url == '' || url == null) {
+		return
+	}
+
+	window.location.replace(url);
 }
 
 function _submitGoogleForm() {
@@ -57,13 +64,12 @@ function _submitGoogleForm() {
 		if (this.status >= 200 && this.status < 400) {
 			_successSubmission(this.response);
 		} else {
-			_errorSubmission();
+			_exitSubmission();
 		}
 	}
-	request.onerror = _errorSubmission();
+	request.onerror = _exitSubmission();
 
 	// clear the console
-	setTimeout(_clearConsole, 1500);
 	request.send(data);
 }
 

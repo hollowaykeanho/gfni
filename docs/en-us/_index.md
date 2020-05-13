@@ -19,26 +19,22 @@ parent = ""
 weight = 1
 +++
 -->
-
-# Hound Submission
-This is the hound submission form. It is hosted on a static site generator
-using [ZORALab Bissetii](https://zoralab.gitlab.io/bissetii/en-us/) styling
-engine. Check out the side-menu for more information.
-
-> **VERY IMPORTANT NOTE**: Please **DO NOT** submit real data onto this demo
-> site.
->
-> The Google Form and Google Spreadsheet in the backend are publicly viewable.
-
 {{< renderHTML "html" >}}
-<br/>
-<br/>
+<h1 align="center">Hound Demo Form</h1>
+<p style="text-align: center">
+This is the hound submission form. It is hosted on a static site generator
+using <a href="https://zoralab.gitlab.io/bissetii/en-us/">ZORALab Bissetii</a>
+styling engine. Check out the side-menu for more information.
+</p>
+
+<hr />
 
 <form	id="hound-input-form"
 	onsubmit="return SubmitHound(event);"
 	method="POST"
 	target="hound-iframe"
 	action="https://docs.google.com/forms/d/e/1FAIpQLSdIZJcxSr4IabqjdE9Wq23JNMxwfCvrx6ToqRAfCTKBNUNWNw/formResponse"
+	data-redirect="{{< absLangLink "pages/done" >}}"
 >
 	<fieldset>
 		<label for="form-fullname">Full Name per NRIC</label>
@@ -75,8 +71,17 @@ engine. Check out the side-menu for more information.
 	/>
 
 	<fieldset>
-		<input type="submit"
+		<input style="display: block; margin: auto" class="pinpoint" type="submit"
 		value="Submit" />
 	</fieldset>
 </form>
+
+<hr />
+<br />
 {{< /renderHTML >}}
+
+> **VERY IMPORTANT INTERNAL NOTE**
+>
+> Please **DO NOT** submit real data onto this demo site.
+>
+> The Google Form and Google Spreadsheet in the backend are publicly viewable.
