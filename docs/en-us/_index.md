@@ -30,9 +30,8 @@ styling engine. Check out the side-menu for more information.
 <hr />
 
 <form	id="hound-input-form"
-	onsubmit="return SubmitHound(event);"
 	method="POST"
-	target="hound-iframe"
+	target="hound-responder"
 	action="https://docs.google.com/forms/d/e/1FAIpQLSdIZJcxSr4IabqjdE9Wq23JNMxwfCvrx6ToqRAfCTKBNUNWNw/formResponse"
 	data-redirect="{{< absLangLink "pages/done" >}}"
 >
@@ -75,6 +74,12 @@ styling engine. Check out the side-menu for more information.
 		value="Submit" />
 	</fieldset>
 </form>
+<iframe id="hound-responder"
+	name="hound-responder"
+	height="150px"
+	width="100%"
+	scrolling="no">
+</iframe>
 
 <hr />
 <br />
