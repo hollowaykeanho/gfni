@@ -8,7 +8,7 @@ self-tracking information to Google Forms.
 """
 keywords = [""]
 authors = ["ZORALab Team"]
-draft = true
+draft = false
 type = ""
 layout = "single"
 # thumbnailURL = "#"
