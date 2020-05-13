@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://demo.hound.zoralab.com"
 canonifyURLs = true
 buildDrafts = false
 buildExpired = false
