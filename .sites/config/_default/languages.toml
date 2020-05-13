@@ -1,0 +1,11 @@
+#[zh-cn]
+#languageCode = "zh-cn"
+#languageName = "Chinese (Simplified)"
+#contentDir = "../docs/zh-cn"
+#title = "我的Hugo网站"
+
+[en-us]
+languageCode = "en-us"
+languageName = "English"
+contentDir = "../docs/en-us"
+title = "My New Hugo Site"

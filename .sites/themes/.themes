@@ -1,0 +1,10 @@
+# list your theme url here separated by space. It follows this pattern:
+#                    <URL> <branch> <optional: tag>
+#
+# if the line is not comforming to the pattern, it will be ignored.
+#
+#
+# example:
+# https://gitlab.com/ZORALab/bissetii master v1.0.0
+################################################################################
+https://gitlab.com/ZORALab/bissetii master

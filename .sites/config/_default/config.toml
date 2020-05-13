@@ -1,0 +1,27 @@
+baseURL = "http://example.org/"
+canonifyURLs = true
+buildDrafts = false
+buildExpired = false
+buildFuture = false
+theme = ["bissetii"]
+enableRobotsTXT = true
+metaDataFormat = "toml"
+oogleAnalytics = ""
+paginate = 10
+summaryLength = 70
+sectionPagesMenu = "sections"
+enableEmoji = true
+pluralizeListTitles = false
+
+archetypeDir = "archetypes"
+assetDir = "assets"
+dataDir = "../docs/.data"
+staticDir = "static"
+layoutDir = "layouts"
+themesDir = "themes"
+publishDir = "../public"
+i18nDir = "i18n"
+
+defaultContentLanguage = "en-us"
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true

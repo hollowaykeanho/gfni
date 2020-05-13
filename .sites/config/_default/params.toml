@@ -1,0 +1,61 @@
+# browser cache settings
+cachesType = "private"
+cachesAge = "86400"
+
+
+
+# social media sharing
+thumbnailURL = "/img/logo/s2048-color.png"
+twitterCard = "summary"
+twitterUsername = "bissetii"
+
+
+
+# site authors
+authors = [
+	# "John M. Smith",
+	# "Jane M. Smith",
+]
+
+
+
+# css inclusion
+includeCSS = [
+	#"https://cdn.example.com/myCSS.css"
+]
+
+# asset css inclusion (compress into 1 css file)
+# NOTE: put your css files inside assets directory. SASS can only compile
+#       resources from that path.
+includeAssetCSS = [
+	#"css/myCSS.css"  #--> $assetDir/css/myCSS.css"
+]
+
+
+
+# defer js inclusion
+includeDeferJS = [
+	#"https://cdn.example.com/myLib.js"
+]
+
+# defer asset js inclusion
+# NOTE: put your js files inside assets directory. compiler can only compile
+#       resources from that path.
+includeDeferAssetJS = [
+	# "js/myLib.js"    #--> $assetDir/js/myLib.js
+	"js/hound.js"
+]
+
+
+
+# async js inclusion
+includeAsyncJS = [
+	#"https://cdn.example.com/myLib.js"
+]
+
+# async asset js inclusion
+# NOTE: put your js files inside assets directory. compiler can only compile
+#       resources from that path.
+includeAsyncAssetJS = [
+	# "js/myLib.js"    #--> $assetDir/js/myLib.js
+]
