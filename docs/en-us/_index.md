@@ -34,11 +34,12 @@ styling engine. Check out the side-menu for more information.
 	target="hound-responder"
 	action="https://docs.google.com/forms/d/e/1FAIpQLSdIZJcxSr4IabqjdE9Wq23JNMxwfCvrx6ToqRAfCTKBNUNWNw/formResponse"
 	data-redirect="{{< absLangLink "pages/done" >}}"
+	data-expiry="1"
 >
 	<fieldset>
-		<label for="form-fullname">Full Name per NRIC</label>
+		<label for="hound-fullname">Full Name per NRIC</label>
 		<input type="text"
-			id="form-fullname"
+			id="hound-fullname"
 			name="entry.1123956260"
 			placeholder="John M. Smith"
 			required
@@ -46,9 +47,9 @@ styling engine. Check out the side-menu for more information.
 	</fieldset>
 
 	<fieldset>
-		<label for="form-phone">Handphone</label>
+		<label for="hound-phone">Handphone</label>
 		<input type="number"
-			id="form-phone"
+			id="hound-phone"
 			name="entry.30705284"
 			placeholder="0123456789"
 			required
@@ -56,21 +57,22 @@ styling engine. Check out the side-menu for more information.
 	</fieldset>
 
 	<input type="hidden"
-		id="form-location"
+		id="hound-location"
 		name="entry.1016469063"
 		value="randomGeneratedSHA512IDIGuess"
 		required
 	/>
 
 	<input type="hidden"
-		id="form-pid"
+		id="hound-pid"
 		name="entry.163974192"
 		value="SecretPhraseForUniquelyID"
 		required
 	/>
 
 	<fieldset>
-		<input style="display: block; margin: auto" class="pinpoint" type="submit"
+		<input style="display: block; margin: auto" class="pinpoint"
+		type="submit"
 		value="Submit" />
 	</fieldset>
 </form>
