@@ -1,0 +1,19 @@
+include:
+    - .fennec/core/linux/debian.yml
+    - .fennec/core/linux/base/hugo.yml
+    - .fennec/publish/linux/hugo/debian.yml
+
+variables:
+    HUGO_VERSION: "0.62.0"
+
+test:
+    script:
+        - echo "no test is needed"
+
+package:
+    script:
+        - echo "to be developed later"
+
+upstream:
+    script:
+        - echo "to be developed later"
