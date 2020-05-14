@@ -56,6 +56,19 @@ styling engine. Check out the side-menu for more information.
 		/>
 	</fieldset>
 
+	<fieldset>
+		<label for="hound-phone">Temperature</label>
+		<input type="number"
+			id="hound-temperature"
+			name="entry.200307806"
+			placeholder="35.5"
+			min="33"
+			max="40"
+			step="0.001"
+			required
+		/>
+	</fieldset>
+
 	<input type="hidden"
 		id="hound-location"
 		name="entry.1016469063"
