@@ -91,4 +91,6 @@ styling engine. Check out the side-menu for more information.
 >
 > Please **DO NOT** submit real data onto this demo site.
 >
-> The Google Form and Google Spreadsheet in the backend are publicly viewable.
+> The [Google Form](https://docs.google.com/forms/d/1JxxZQVedoPVQBECIbIiWnmv0Wk17hdq6ew2sWsJflBg/edit?usp=sharing)
+> and [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1jwRz9UaivDH_Fn27IjvD3d6fcsZNV-GmkNFmkh324pg/edit?usp=sharing)
+> in the backend are publicly viewable.
